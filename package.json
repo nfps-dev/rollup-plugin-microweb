@@ -11,6 +11,7 @@
 		"privacy"
 	],
 	"homepage": "https://nfps.dev/",
+	"repository": "github:nfps.dev/rollup-plugin-microweb",
 	"license": "ISC",
 	"author": {
 		"name": "Blake Regalia",

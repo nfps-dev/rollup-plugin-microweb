@@ -10,7 +10,11 @@ import typescript from '@rollup/plugin-typescript';
 import filesize from 'rollup-plugin-filesize';
 import uglify from 'uglify-js';
 
-export function microWeb(): OutputPlugin[] {
+export interface MicroWebConfig {
+	include?: string;
+}
+
+export function microWeb(gc_microweb: MicroWebConfig={}): OutputPlugin[] {
 
 	return [
 		// node-style resolution
@@ -21,7 +25,7 @@ export function microWeb(): OutputPlugin[] {
 		// enable typescript
 		typescript({
 			sourceMap: true,
-			include: 'src/**/*.ts',
+			include: gc_microweb.include || 'src/**/*.ts',
 		}),
 
 		// minify using terser

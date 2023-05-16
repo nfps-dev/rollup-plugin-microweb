@@ -19,13 +19,20 @@
 		"url": "https://blake-regalia.com/"
 	},
 	"type": "commonjs",
-	"main": "dist/main.js",
+	"main": "dist/main.cjs",
+	"module": "dist/main.mjs",
 	"types": "dist/main.d.ts",
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "tsc -p tsconfig.cjs.json"
+		"build:cjs": "tsc -p tsconfig.cjs.json && mv dist/main.js dist/main.cjs",
+		"build:mjs": "tsc -p tsconfig.json && mv dist/main.js dist/main.mjs",
+		"build": "yarn build:cjs && yarn build:mjs"
+	},
+	"exports": {
+		"require": "./dist/main.cjs",
+		"import": "./dist/main.mjs"
 	},
 	"dependencies": {
 		"@blake.regalia/belt": "^0.5.2",

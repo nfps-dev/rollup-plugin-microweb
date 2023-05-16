@@ -1,6 +1,6 @@
 {
 	"name": "@nfps.dev/rollup-plugin-microweb",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Rollup plugin for bundling and minifying NFP TypeScript projects",
 	"keywords": [
 		"nfp",

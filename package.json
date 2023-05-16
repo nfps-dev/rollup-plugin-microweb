@@ -18,15 +18,14 @@
 		"email": "blake.regalia@gmail.com",
 		"url": "https://blake-regalia.com/"
 	},
-	"type": "module",
+	"type": "commonjs",
 	"main": "dist/main.js",
-	"module": "dist/main.js",
 	"types": "dist/main.d.ts",
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "tsc -p tsconfig.json"
+		"build": "tsc -p tsconfig.cjs.json"
 	},
 	"dependencies": {
 		"@blake.regalia/belt": "^0.5.2",

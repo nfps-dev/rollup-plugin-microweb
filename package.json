@@ -1,16 +1,16 @@
 {
-	"name": "@nfp.tools/rollup-plugin-microweb",
+	"name": "@nfps.dev/rollup-plugin-microweb",
 	"version": "0.0.1",
 	"description": "Rollup plugin for bundling and minifying NFP TypeScript projects",
 	"keywords": [
 		"nfp",
-		"nfp.tools",
+		"nfps.dev",
 		"secret-network",
 		"smart-contract",
 		"nft",
 		"privacy"
 	],
-	"homepage": "https://nfp.tools/",
+	"homepage": "https://nfps.dev/",
 	"license": "ISC",
 	"author": {
 		"name": "Blake Regalia",
@@ -38,7 +38,7 @@
 	"devDependencies": {
 		"@blake.regalia/eslint-config-elite": "^0.2.4",
 		"@blake.regalia/tsconfig": "^0.0.2",
-		"@types/node": "^20.1.4",
+		"@types/node": "^20.1.5",
 		"@types/uglify-js": "^3.17.1",
 		"rollup": "^3.21.7",
 		"ts-toolbelt": "^9.6.0",

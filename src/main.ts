@@ -38,7 +38,8 @@ export function microWeb(): OutputPlugin[] {
 					unsafe_proto: true,
 					unsafe_regexp: true,
 
-					booleans_as_integers: true,
+					// this can cause an error when web crypto API expects a boolean
+					// booleans_as_integers: true,
 				},
 				mangle: {
 					toplevel: true,

@@ -5,13 +5,15 @@ import type {
 import resolve from '@rollup/plugin-node-resolve';
 
 import terser from '@rollup/plugin-terser';
-import typescript from '@rollup/plugin-typescript';
+import typescript, { type RollupTypescriptPluginOptions } from '@rollup/plugin-typescript';
 
 import filesize from 'rollup-plugin-filesize';
 import uglify from 'uglify-js';
 
-export interface MicroWebConfig {
-	include?: string;
+export interface MicroWebConfig extends Pick<
+	RollupTypescriptPluginOptions,
+	'include' | 'exclude' | 'tsconfig' | 'compilerOptions' | 'typescript'
+> {
 }
 
 export function microWeb(gc_microweb: MicroWebConfig={}): OutputPlugin[] {
@@ -25,7 +27,11 @@ export function microWeb(gc_microweb: MicroWebConfig={}): OutputPlugin[] {
 		// enable typescript
 		typescript({
 			sourceMap: true,
-			include: gc_microweb.include || 'src/**/*.ts',
+			include: gc_microweb.include || ['src/**/*.ts'],
+			...gc_microweb.exclude? {exclude:gc_microweb.exclude}: {},
+			...gc_microweb.tsconfig? {tsconfig:gc_microweb.tsconfig}: {},
+			...gc_microweb.typescript? {typescript:gc_microweb.typescript}: {},
+			...gc_microweb.compilerOptions? {compilerOptions:gc_microweb.compilerOptions}: {},
 		}),
 
 		// minify using terser

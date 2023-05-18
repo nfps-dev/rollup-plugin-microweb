@@ -44,6 +44,33 @@ export function microWeb(gc_microweb: MicroWebConfig={}): OutputPlugin[] {
 
 					// this can cause an error when web crypto API expects a boolean
 					// booleans_as_integers: true,
+
+					pure_funcs: [
+						'buffer',
+						'sha256',
+						'sha256d',
+						'sha384',
+						'sha512',
+						'hmac',
+						'text_to_buffer',
+						'buffer_to_text',
+						'base64_to_text',
+						'text_to_base64',
+						'json_to_buffer',
+						'buffer_to_json',
+						'buffer_to_hex',
+						'hex_to_buffer',
+						'buffer_to_base64',
+						'base64_to_buffer',
+						'string8_to_buffer',
+						'buffer_to_string8',
+						'buffer_to_base93',
+						'base93_to_buffer',
+						'buffer_to_base58',
+						'base58_to_buffer',
+						'concat',
+						'concat2',
+					],
 				},
 				mangle: {
 					toplevel: true,

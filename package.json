@@ -35,7 +35,7 @@
 		"build": "yarn build:cjs && yarn build:mjs"
 	},
 	"dependencies": {
-		"@blake.regalia/belt": "^0.6.1",
+		"@blake.regalia/belt": "^0.6.2",
 		"@rollup/plugin-node-resolve": "^15.0.2",
 		"@rollup/plugin-terser": "^0.4.3",
 		"@rollup/plugin-typescript": "^11.1.1",
@@ -43,7 +43,7 @@
 		"uglify-js": "^3.17.4"
 	},
 	"devDependencies": {
-		"@blake.regalia/eslint-config-elite": "^0.2.6",
+		"@blake.regalia/eslint-config-elite": "^0.2.7",
 		"@blake.regalia/tsconfig": "^0.1.2",
 		"@types/node": "^20.2.1",
 		"@types/uglify-js": "^3.17.1",

@@ -3,7 +3,8 @@
 
 	"compilerOptions": {
 		"outDir": "dist/cjs",
-		"declarationDir": "dist/cjs"
+		"declarationDir": "dist/cjs",
+		"sourceMap": false
 	},
 
 	"include": [

@@ -30,7 +30,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build:cjs": "tsc -p tsconfig.cjs.json",
+		"build:cjs": "tsc -p tsconfig.cjs.json && mv dist/cjs/main.js dist/cjs/main.mjs",
 		"build:mjs": "tsc -p tsconfig.json",
 		"build": "yarn build:cjs && yarn build:mjs"
 	},

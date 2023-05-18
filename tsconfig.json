@@ -3,10 +3,10 @@
 
 	"compilerOptions": {
 		"baseUrl": ".",
-		"outDir": "dist",
+		"outDir": "dist/cjs",
 
 		"declaration": true,
-		"declarationDir": "dist",
+		"declarationDir": "dist/cjs",
 
 		"sourceMap": false
 	},

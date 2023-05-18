@@ -19,35 +19,35 @@
 		"url": "https://blake-regalia.com/"
 	},
 	"type": "commonjs",
-	"main": "dist/main.cjs",
-	"module": "dist/main.mjs",
-	"types": "dist/main.d.ts",
+	"main": "dist/cjs/main.js",
+	"module": "dist/mjs/main.js",
+	"types": "dist/mjs/main.d.ts",
+	"exports": {
+		"require": "./dist/cjs/main.js",
+		"import": "./dist/mjs/main.js"
+	},
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build:cjs": "tsc -p tsconfig.cjs.json && mv dist/main.js dist/main.cjs",
-		"build:mjs": "tsc -p tsconfig.json && mv dist/main.js dist/main.mjs",
+		"build:cjs": "tsc -p tsconfig.cjs.json",
+		"build:mjs": "tsc -p tsconfig.json",
 		"build": "yarn build:cjs && yarn build:mjs"
-	},
-	"exports": {
-		"require": "./dist/main.cjs",
-		"import": "./dist/main.mjs"
 	},
 	"dependencies": {
 		"@blake.regalia/belt": "^0.5.2",
 		"@rollup/plugin-node-resolve": "^15.0.2",
-		"@rollup/plugin-terser": "^0.4.1",
+		"@rollup/plugin-terser": "^0.4.3",
 		"@rollup/plugin-typescript": "^11.1.1",
 		"rollup-plugin-filesize": "^10.0.0",
 		"uglify-js": "^3.17.4"
 	},
 	"devDependencies": {
 		"@blake.regalia/eslint-config-elite": "^0.2.4",
-		"@blake.regalia/tsconfig": "^0.0.2",
-		"@types/node": "^20.1.5",
+		"@blake.regalia/tsconfig": "^0.1.2",
+		"@types/node": "^20.2.0",
 		"@types/uglify-js": "^3.17.1",
-		"rollup": "^3.21.7",
+		"rollup": "^3.22.0",
 		"ts-toolbelt": "^9.6.0",
 		"typescript": "^5.0.4"
 	},

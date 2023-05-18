@@ -19,18 +19,18 @@
 		"url": "https://blake-regalia.com/"
 	},
 	"type": "module",
-	"main": "dist/cjs/main.js",
+	"main": "dist/cjs/main.cjs",
 	"module": "dist/mjs/main.js",
 	"types": "dist/mjs/main.d.ts",
 	"exports": {
-		"require": "./dist/cjs/main.js",
+		"require": "./dist/cjs/main.cjs",
 		"import": "./dist/mjs/main.js"
 	},
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build:cjs": "tsc -p tsconfig.cjs.json && mv dist/cjs/main.js dist/cjs/main.mjs",
+		"build:cjs": "tsc -p tsconfig.cjs.json && mv dist/cjs/main.js dist/cjs/main.cjs",
 		"build:mjs": "tsc -p tsconfig.json",
 		"build": "yarn build:cjs && yarn build:mjs"
 	},
